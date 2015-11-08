@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper</title>
+</head>
+
+    <body>
+        <h1>Welcome...</h1>
+
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li><a href="question">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <strong>There are no categories present</strong>
+        {% endif %}
+
+        <a href="about">About</a><br />
+    </body>
+</html>

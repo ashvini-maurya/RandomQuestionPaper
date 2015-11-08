@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper</title>
+
+</head>
+
+    <body>
+        <h1>Question paper</h1>
+{#        {{ easyQuestions }}#}
+        <h2>Section A (1 marks each)</h2>
+        <ol>
+            {% for ques in easyQuestions %}
+
+                <li><span>{{ ques.question }}</span></li>
+
+            {% endfor %}
+        </ol>
+        <br><hr><br>
+        <h2>Section B (5 marks each)</h2>
+        <ol>
+            {% for ques in mediumQuestions %}
+                <li><span>{{ ques.question }}</span></li>
+            {% endfor %}
+        </ol>
+         <h2>Section C (5 marks each)</h2>
+        <ol>
+            {% for ques in hardQuestions %}
+                <li><span>{{ ques.question }}</span></li>
+            {% endfor %}
+        </ol>
+
+    </body>
+</html>
