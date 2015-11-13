@@ -17,8 +17,6 @@ def about(request):
 def question(request):
     list=[]
     easyQuestions=Question.objects.filter(difficult_level='low').order_by('?')[:10]
-    for x in easyQuestions:
-        print(x.question)
     mediumQuestions=Question.objects.filter(difficult_level='medium').order_by('?')[:4]
     list.append(easyQuestions)
     hardQuestions=Question.objects.filter(difficult_level='high').order_by('?')[:4]
